@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style type="text/css">
+	 *{
+		padding: 0;
+		marging: 0;
+	}
+	.mdiv{
+		background-image: url('https://img.freepik.com/free-photo/teacher-s-day-elements-composition_23-2149044935.jpg?w=996&t=st=1705736857~exp=1705737457~hmac=d12199cf6dba0c967cb5a28ff1095073894f1696ba682a5129731a5a4fc05d85');
+		
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: top left;
+		}
+	.calc{
+
+		height: 500px;
+		width: 300px;
+		background: black;
+		border: grey solid 4px;
+		border-radius: 20px;
+	}
+	/*.inop{
+		width: 95%;
+		display: flex;
+		align-items: baseline;
+		border: baseline;
+		border: white solid 5px;
+		border-radius: 20px;
+		margin-left: 2.5px; 
+	}*/
+	.op{
+		height: 100px;
+		width: 295px;
+		margin-right: 20px;
+		background: white;
+		color: black;
+		text-align: right;
+		font-size: 50px;
+		z-index: 5;
+		border: none;
+		border-radius: 20px;
+		margin-left: 2.5px;
+	}
+	.inop{
+		margin-bottom: 10px;
+	}
+	.kdiv{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.but{
+		height: 60px;
+		width: 60px;
+		background: white;
+		border-radius: 50%;
+		margin: 2px;
+		border: none;
+
+	}
+	.but0	{
+		height: 60px;
+		width: 120px;
+		background: white;
+		border-radius: 50%;
+		margin: 2px;
+		border: none;
+	}
+
+	.buto{
+		height: 60px;
+		width: 60px;
+		background: darkorange;
+		color: white;
+		/*align-items: center;*/
+		font-size: 25px;
+		border-radius: 50%;
+		margin: 2px;
+		border: none;
+
+
+	}
+</style>
+<body>                                  
+	<div class="mdiv">
+		<div class="calc">
+			<form>
+			<div class="inop">
+				<input type="text" name="op" class="op">
+			</div>
+
+			
+				<div class="kdiv">
+					<input type="button" name="AC" value="AC" onclick="op.value=''"class="but">
+					<input type="button" name="C" value="C" onclick="op.value=Math.floor(op.value/10)"class="but">
+					<input type="button" name="mod" value="%" onclick="op.value+='%'"class="but">
+					<input type="button" name="operator" value="/" onclick="op.value+='/'" class="buto">
+				</div>
+				<div class="kdiv">
+					<input type="button" name="number" value="7" onclick="op.value+='7'"class="but">
+					<input type="button" name="number" value="8" onclick="op.value+='8'"class="but">
+					<input type="button" name="number" value="9" onclick="op.value+='9'"class="but">
+					<input type="button" name="operator" value="X" onclick="op.value+='*'" class="buto">
+				</div>
+				<div class="kdiv">
+					<input type="button" name="number" value="4" onclick="op.value+='4'"class="but">
+					<input type="button" name="number" value="5" onclick="op.value+='5'"class="but">
+				   	<input type="button" name="number" value="6" onclick="op.value+='6'"class="but">
+					<input type="button" name="operator" value="-" onclick="op.value+='-'" class="buto">
+				</div>
+				<div class="kdiv">
+					<input type="button" name="number" value="1" onclick="op.value+='1'"class="but">
+					<input type="button" name="number" value="2" onclick="op.value+='2'"class="but">
+					<input type="button" name="number" value="3" onclick="op.value+='3'"class="but">
+					<input type="button" name="operator" value="+" onclick="op.value+='+'"class="buto">
+				</div>
+				<div class="kdiv">
+					<input type="button" name="number" value="0" onclick="op.value+='0'"class="but0">
+					<input type="button" name="operator" value="." onclick="op.value+='.'"class="but">
+					<input type="button" name="operator" value="=" onclick="op.value=eval(op.value)"class="buto">
+				</div>
+			</form>
+		</div>	
+	</div>	
+</body>
+</html>
